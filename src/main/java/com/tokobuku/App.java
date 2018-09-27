@@ -15,5 +15,13 @@ public class App {
 
         Customer customerLocal = customerDao.findByCustomerId(1);
         System.out.println(customerLocal);
+
+        customerLocal.setAddress("Jalan Klambir 5");
+        customerDao.update(customerLocal);
+        customerLocal = customerDao.findByCustomerId(1);
+        System.out.println(customerLocal);
+
+        customerDao.delete(2);
+        System.out.println("Customer ID 2 has been deleted");
     }
 }

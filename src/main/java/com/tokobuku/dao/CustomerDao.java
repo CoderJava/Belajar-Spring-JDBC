@@ -8,4 +8,8 @@ public interface CustomerDao {
 
     Customer findByCustomerId(int custId);
 
+    void update(Customer customer);
+
+    void delete(int custId);
+
 }
